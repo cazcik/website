@@ -1,0 +1,33 @@
+---
+import { type CollectionEntry, getCollection } from "astro:content";
+import Root from "../../layouts/root.astro";
+
+export async function getStaticPaths() {
+  const posts = await getCollection("blog");
+  return posts.map((post) => ({
+    params: { slug: post.slug },
+    props: post,
+  }));
+}
+type Props = CollectionEntry<"blog">;
+
+const post = Astro.props;
+const { Content } = await post.render();
+---
+
+<Root
+  title={`${post.data.title} ﹣ Zac Wojcik`}
+  description={post.data.description}
+>
+  <div class="prose prose-neutral mb-20 max-w-full lowercase">
+    <h1 class="mb-2">{post.data.title}</h1>
+    <div class="not-prose">
+      <p class="text-sm text-neutral-600 md:text-base">
+        {new Date(post.data.pubDate).toLocaleDateString()}
+      </p>
+    </div>
+    <article>
+      <Content />
+    </article>
+  </div>
+</Root>
