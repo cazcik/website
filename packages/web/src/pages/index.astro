@@ -1,8 +1,30 @@
 ---
-
+import Root from "../layouts/root.astro";
 ---
 
-<html>
-	<head></head>
-	<body></body>
-</html>
+<Root
+  title="Zac Wojcik"
+  description="My humble home on the collection of tubes we call the internet."
+>
+  <div class="flex min-h-dvh">
+    <div class="m-auto w-full">
+      <div class="mx-auto max-w-5xl px-5">
+        <div class="flex items-center gap-x-4">
+          <img
+            src="/icon.png"
+            alt="a black and white illustration of a man in a cartoonish style"
+            class="h-20 w-20 rounded-full border border-neutral-200"
+          />
+          <div>
+            <h1 class="text-xl font-bold text-black">
+              zac wojcik <span class="text-lg">(@cazcik)</span>
+            </h1>
+            <p class="text-neutral-600">
+              developer, security engineer, founder.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</Root>
