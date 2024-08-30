@@ -1,6 +1,7 @@
 export type Bindings = {
   readonly EMAIL_QUEUE: Queue;
   readonly DB: D1Database;
+  readonly SLACK_WEBHOOK: string;
 };
 
 export type EmailQueueMessage = {
