@@ -28,13 +28,15 @@ newsletter.post(
     const { email } = c.req.valid("json");
 
     try {
-      await c.env.EMAIL_QUEUE.send({ email: email }, { contentType: "json" });
+      await c.env.EMAIL_QUEUE.send(
+        { action: "newsletter", email: email },
+        { contentType: "json" }
+      );
+      return c.json({ message: "subscribed", data: { email } }, 200);
     } catch (e) {
       console.error(e);
       return c.json({ message: "internal server error" }, 500);
     }
-
-    return c.json({ message: "subscribed", data: { email } }, 200);
   }
 );
 
