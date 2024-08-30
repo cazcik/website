@@ -1,3 +1,7 @@
 name = "caz-api"
 main = "./src/index.ts"
 compatibility_date = "2024-08-28"
+
+[[queues.producers]]
+  queue = "caz-email"
+  binding = "EMAIL_QUEUE"

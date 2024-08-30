@@ -4,7 +4,10 @@ import { logger } from "hono/logger";
 import { HTTPException } from "hono/http-exception";
 import { trimTrailingSlash } from "hono/trailing-slash";
 
-const app = new Hono();
+import type { Bindings } from "./types/hono";
+import newsletter from "./routes/newsletter";
+
+const app = new Hono<{ Bindings: Bindings }>();
 
 app.use(logger());
 app.use(cors());
@@ -13,6 +16,8 @@ app.use(trimTrailingSlash());
 app.get("/", (c) => {
   return c.text(c.req.path, 200);
 });
+
+app.route("/newsletter", newsletter);
 
 app.notFound((c) => {
   return c.text("not found", 404);
