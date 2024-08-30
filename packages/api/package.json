@@ -2,7 +2,8 @@
   "name": "@caz/api",
   "scripts": {
     "dev": "wrangler dev src/index.ts",
-    "deploy": "wrangler deploy --minify src/index.ts"
+    "deploy": "wrangler deploy --minify src/index.ts",
+    "db:apply": "wrangler d1 migrations apply"
   },
   "dependencies": {
     "@hono/zod-validator": "^0.2.2",

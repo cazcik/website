@@ -1,7 +1,19 @@
 name = "caz-api"
 main = "./src/index.ts"
-compatibility_date = "2024-08-28"
+compatibility_date = "2024-08-21"
 
 [[queues.producers]]
   queue = "caz-email"
   binding = "EMAIL_QUEUE"
+
+[[queues.consumers]]
+  queue = "caz-email"
+  max_batch_size = 10
+  max_batch_timeout = 30
+  max_retries = 3
+
+[[d1_databases]]
+  binding = "DB"
+  database_name = "caz"
+  database_id = "17cd0332-b75e-4386-b4fc-64779d1d19ee"
+  migrations_dir = "./migrations"

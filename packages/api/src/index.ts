@@ -4,7 +4,7 @@ import { logger } from "hono/logger";
 import { HTTPException } from "hono/http-exception";
 import { trimTrailingSlash } from "hono/trailing-slash";
 
-import type { Bindings } from "./types/hono";
+import type { Bindings, EmailQueueMessage } from "./types/hono";
 import newsletter from "./routes/newsletter";
 
 const app = new Hono<{ Bindings: Bindings }>();
@@ -32,4 +32,28 @@ app.onError((e, c) => {
   }
 });
 
-export default app;
+export default {
+  fetch: app.fetch,
+  async queue(batch: MessageBatch<EmailQueueMessage>, env: Bindings) {
+    let email = "";
+    for (const message of batch.messages) {
+      if (message.body.action === "newsletter") {
+        email += message.body.email;
+        try {
+          let id = crypto.randomUUID();
+          await env.DB.prepare(
+            "INSERT INTO newsletter (id, email) VALUES (?, ?)"
+          )
+            .bind(id, email)
+            .all();
+          console.log(`inserted email into newsletter: ${email}`);
+        } catch (e) {
+          console.error(e);
+          throw new Error("failed to insert email into newsletter");
+        }
+      } else {
+        throw new Error(`invalid action: ${message.body.action}`);
+      }
+    }
+  },
+};

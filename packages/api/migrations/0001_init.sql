@@ -1,0 +1,6 @@
+-- Migration number: 0001 	 2024-08-30T13:15:37.189Z
+CREATE TABLE IF NOT EXISTS newsletter (
+    id TEXT PRIMARY KEY,
+    email TEXT NOT NULL UNIQUE,
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+);

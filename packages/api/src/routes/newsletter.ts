@@ -32,6 +32,7 @@ newsletter.post(
         { action: "newsletter", email: email },
         { contentType: "json" }
       );
+      console.log(`queued email for newsletter: ${email}`);
       return c.json({ message: "subscribed", data: { email } }, 200);
     } catch (e) {
       console.error(e);
