@@ -67,6 +67,9 @@ importers:
         specifier: ^5.5.4
         version: 5.5.4
     devDependencies:
+      '@caz/api':
+        specifier: workspace:*
+        version: link:../api
       '@tailwindcss/typography':
         specifier: ^0.5.15
         version: 0.5.15(tailwindcss@3.4.10)
