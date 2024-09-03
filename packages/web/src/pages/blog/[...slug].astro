@@ -22,7 +22,7 @@ const { Content } = await post.render();
   <div class="prose prose-neutral max-w-full lowercase">
     <h1 class="mb-2">{post.data.title}</h1>
     <div class="not-prose">
-      <p class="text-sm text-neutral-600 md:text-base">
+      <p class="text-neutral-600">
         {new Date(post.data.pubDate).toLocaleDateString()}
       </p>
     </div>
