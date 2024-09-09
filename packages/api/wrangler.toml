@@ -1,4 +1,4 @@
-name = "caz-api"
+name = "cazcik-api"
 main = "./src/index.ts"
 compatibility_date = "2024-08-21"
 
