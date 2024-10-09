@@ -2,7 +2,6 @@
 import { ViewTransitions } from "astro:transitions";
 
 import "../styles/index.css";
-import Posthog from "../components/posthog.astro";
 
 interface Props {
   title: string;
@@ -89,6 +88,10 @@ const { title, description, image = "/icon.png" } = Astro.props;
         <slot />
       </main>
     </div>
-    <Posthog />
+    <script
+      defer
+      data-domain="cazcik.com"
+      data-api="https://circles.cazcik.com/api/event"
+      src="https://circles.cazcik.com/js/script.js"></script>
   </body>
 </html>
