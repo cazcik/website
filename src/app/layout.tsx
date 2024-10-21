@@ -1,11 +1,24 @@
 import Link from "next/link";
 import Image from "next/image";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import localFont from "next/font/local";
 
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const source = localFont({
+  src: [
+    {
+      path: "source-sans-3vf-upright.woff2",
+      style: "normal",
+    },
+    {
+      path: "source-sans-3vf-italic.woff2",
+      style: "italic",
+    },
+  ],
+  display: "swap",
+  variable: "--font-source",
+});
 
 export const metadata: Metadata = {
   title: "Zac Wojcik",
@@ -19,7 +32,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.className} bg-white text-black antialiased scroll-smooth`}
+      className={`${source.variable} bg-white text-black antialiased scroll-smooth`}
     >
       <body>
         <div className="mx-auto mb-20 flex max-w-xl flex-col md:mt-20 md:max-w-2xl md:flex-row lg:max-w-4xl">
