@@ -1,11 +1,14 @@
 import Link from "next/link";
+import { RiExternalLinkLine } from "@remixicon/react";
 
 export default function IndexPage() {
   return (
     <div className="flex flex-col space-y-7">
       <div>
-        <h1 className="mb-2 text-xl font-semibold text-black">zac wojcik</h1>
-        <p className="text-neutral-600">
+        <h1 className="mb-2 text-xl font-semibold text-black dark:text-white">
+          zac wojcik
+        </h1>
+        <p className="text-neutral-500">
           i'm an application security engineer helping developers write secure
           code, design secure systems, and build for resiliency. in my free time
           i work on open source, play hockey, and enjoy the outdoors with my
@@ -13,45 +16,51 @@ export default function IndexPage() {
         </p>
       </div>
       <div>
-        <h2 className="mb-3 text-xl font-medium text-black">projects</h2>
+        <h2 className="mb-3 text-xl font-medium text-black dark:text-white">
+          projects
+        </h2>
         <div className="flex flex-col space-y-3">
           <div>
             <p>solus</p>
-            <p className="text-neutral-600">
+            <p className="text-neutral-500">
               open source security platform for all.
             </p>
           </div>
           <div>
             <p>simul</p>
-            <p className="text-neutral-600">
+            <p className="text-neutral-500">
               open source security platform for security teams.
             </p>
           </div>
         </div>
       </div>
       <div>
-        <h2 className="mb-3 text-xl font-medium text-black">work</h2>
+        <h2 className="mb-3 text-xl font-medium text-black dark:text-white">
+          work
+        </h2>
         <div className="flex flex-col space-y-3">
           <div>
-            <p className="text-neutral-600">2024 ﹣ now</p>
+            <p className="text-neutral-500">2024 ﹣ now</p>
             <p>security engineer ii, application security, health insurance.</p>
           </div>
           <div>
-            <p className="text-neutral-600">2022 ﹣ 2024</p>
+            <p className="text-neutral-500">2022 ﹣ 2024</p>
             <p>application security engineer, life sciences.</p>
           </div>
           <div>
-            <p className="text-neutral-600">2021 ﹣ 2022</p>
+            <p className="text-neutral-500">2021 ﹣ 2022</p>
             <p>security engineer, security service provider.</p>
           </div>
           <div>
-            <p className="text-neutral-600">2018 ﹣ 2021</p>
+            <p className="text-neutral-500">2018 ﹣ 2021</p>
             <p>security analyst, it service provider.</p>
           </div>
         </div>
       </div>
       <div>
-        <h2 className="mb-3 text-xl font-medium text-black">links</h2>
+        <h2 className="mb-3 text-xl font-medium text-black dark:text-white">
+          links
+        </h2>
         <div className="flex flex-col space-y-3">
           <div className="flex">
             <Link
@@ -60,10 +69,13 @@ export default function IndexPage() {
               rel="noopener norefferrer"
               href="https://github.com/cazcik"
             >
-              <p className="text-neutral-600">github</p>
-              <p className="underline-offset-1 group-hover:underline">
-                github.com/cazcik
-              </p>
+              <p className="text-neutral-500">github</p>
+              <div className="flex items-center group">
+                <p className="underline-offset-1 group-hover:underline">
+                  github.com/cazcik
+                </p>
+                <RiExternalLinkLine className="w-4 h-4 ml-1 text-neutral-500 group-hover:text-black dark:group-hover:text-white" />
+              </div>
             </Link>
           </div>
           <div className="flex">
@@ -73,10 +85,13 @@ export default function IndexPage() {
               rel="noopener norefferrer"
               href="https://x.com/cazcik"
             >
-              <p className="text-neutral-600">x</p>
-              <p className="underline-offset-1 group-hover:underline">
-                x.com/cazcik
-              </p>
+              <p className="text-neutral-500">x</p>
+              <div className="flex items-center group">
+                <p className="underline-offset-1 group-hover:underline">
+                  x.com/cazcik
+                </p>
+                <RiExternalLinkLine className="w-4 h-4 ml-1 text-neutral-500 group-hover:text-black dark:group-hover:text-white" />
+              </div>
             </Link>
           </div>
           <div className="flex">
@@ -86,10 +101,29 @@ export default function IndexPage() {
               rel="noopener norefferrer"
               href="https://www.threads.net/@cazcik"
             >
-              <p className="text-neutral-600">threads</p>
-              <p className="underline-offset-1 group-hover:underline">
-                threads.net/@cazcik
-              </p>
+              <p className="text-neutral-500">threads</p>
+              <div className="flex items-center group">
+                <p className="underline-offset-1 group-hover:underline">
+                  threads.net/@cazcik
+                </p>
+                <RiExternalLinkLine className="w-4 h-4 ml-1 text-neutral-500 group-hover:text-black dark:group-hover:text-white" />
+              </div>
+            </Link>
+          </div>
+          <div className="flex">
+            <Link
+              className="group"
+              target="_blank"
+              rel="noopener norefferrer"
+              href="https://bsky.app/profile/cazcik.com"
+            >
+              <p className="text-neutral-500">bluesky</p>
+              <div className="flex items-center group">
+                <p className="underline-offset-1 group-hover:underline">
+                  bsky.app/profile/cazcik.com
+                </p>
+                <RiExternalLinkLine className="w-4 h-4 ml-1 text-neutral-500 group-hover:text-black dark:group-hover:text-white" />
+              </div>
             </Link>
           </div>
         </div>
