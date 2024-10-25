@@ -70,11 +70,11 @@ export default function IndexPage() {
               href="https://github.com/cazcik"
             >
               <p className="text-neutral-500">github</p>
-              <div className="flex items-center group">
+              <div className="group flex items-center">
                 <p className="underline-offset-1 group-hover:underline">
                   github.com/cazcik
                 </p>
-                <RiExternalLinkLine className="w-4 h-4 ml-1 text-neutral-500 group-hover:text-black dark:group-hover:text-white" />
+                <RiExternalLinkLine className="ml-1 h-4 w-4 text-neutral-500 group-hover:text-black dark:group-hover:text-white" />
               </div>
             </Link>
           </div>
@@ -86,11 +86,11 @@ export default function IndexPage() {
               href="https://x.com/cazcik"
             >
               <p className="text-neutral-500">x</p>
-              <div className="flex items-center group">
+              <div className="group flex items-center">
                 <p className="underline-offset-1 group-hover:underline">
                   x.com/cazcik
                 </p>
-                <RiExternalLinkLine className="w-4 h-4 ml-1 text-neutral-500 group-hover:text-black dark:group-hover:text-white" />
+                <RiExternalLinkLine className="ml-1 h-4 w-4 text-neutral-500 group-hover:text-black dark:group-hover:text-white" />
               </div>
             </Link>
           </div>
@@ -102,11 +102,11 @@ export default function IndexPage() {
               href="https://www.threads.net/@cazcik"
             >
               <p className="text-neutral-500">threads</p>
-              <div className="flex items-center group">
+              <div className="group flex items-center">
                 <p className="underline-offset-1 group-hover:underline">
                   threads.net/@cazcik
                 </p>
-                <RiExternalLinkLine className="w-4 h-4 ml-1 text-neutral-500 group-hover:text-black dark:group-hover:text-white" />
+                <RiExternalLinkLine className="ml-1 h-4 w-4 text-neutral-500 group-hover:text-black dark:group-hover:text-white" />
               </div>
             </Link>
           </div>
@@ -118,11 +118,11 @@ export default function IndexPage() {
               href="https://bsky.app/profile/cazcik.com"
             >
               <p className="text-neutral-500">bluesky</p>
-              <div className="flex items-center group">
+              <div className="group flex items-center">
                 <p className="underline-offset-1 group-hover:underline">
                   bsky.app/profile/cazcik.com
                 </p>
-                <RiExternalLinkLine className="w-4 h-4 ml-1 text-neutral-500 group-hover:text-black dark:group-hover:text-white" />
+                <RiExternalLinkLine className="ml-1 h-4 w-4 text-neutral-500 group-hover:text-black dark:group-hover:text-white" />
               </div>
             </Link>
           </div>

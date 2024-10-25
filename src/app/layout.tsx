@@ -68,11 +68,11 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${source.variable} bg-white dark:bg-black dark:text-white text-black antialiased scroll-smooth`}
+      className={`${source.variable} scroll-smooth bg-white text-black antialiased dark:bg-black dark:text-white`}
     >
       <body>
         <div className="mx-auto mb-20 flex max-w-xl flex-col md:mt-20 md:max-w-2xl md:flex-row lg:max-w-4xl">
-          <header className="bg-white dark:bg-black px-5 py-5 md:py-0">
+          <header className="bg-white px-5 py-5 md:py-0 dark:bg-black">
             <div className="flex items-center gap-x-5 md:flex-col md:items-end md:justify-normal md:gap-x-0 md:gap-y-8">
               <Link href="/" className="flex">
                 <Image
@@ -83,20 +83,7 @@ export default function RootLayout({
                   alt="a man wearing a black cap holding a black dog"
                 />
               </Link>
-              <div className="flex gap-x-5 px-2 md:flex-col md:items-end md:gap-x-0 md:gap-y-3">
-                <Link
-                  href="/blog"
-                  className="text-neutral-500 hover:text-neutral-700 dark:hover:text-neutral-300"
-                >
-                  blog
-                </Link>
-                <Link
-                  href="/newsletter"
-                  className="text-neutral-500 hover:text-neutral-700 dark:hover:text-neutral-300"
-                >
-                  newsletter
-                </Link>
-              </div>
+              <div className="flex gap-x-5 px-2 md:flex-col md:items-end md:gap-x-0 md:gap-y-3"></div>
             </div>
           </header>
           <main className="w-full px-5 pt-5 md:ml-5">{children}</main>
