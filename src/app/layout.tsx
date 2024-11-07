@@ -88,14 +88,6 @@ export default function RootLayout({
           </header>
           <main className="w-full px-5 pt-5 md:ml-5">{children}</main>
         </div>
-        {process.env.NODE_ENV === "production" ? (
-          <script
-            defer
-            data-domain="cazcik.com"
-            data-api="https://circles.cazcik.com/api/event"
-            src="https://circles.cazcik.com/js/script.js"
-          ></script>
-        ) : null}
       </body>
     </html>
   );
