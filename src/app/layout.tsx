@@ -79,7 +79,7 @@ export default function RootLayout({
                   src="/avatar.jpg"
                   width={2652}
                   height={3000}
-                  className="h-10 w-10 items-end rounded-full md:h-14 md:w-14"
+                  className="h-10 w-10 items-end rounded-full md:h-12 md:w-14"
                   alt="a man wearing a black cap holding a black dog"
                 />
               </Link>

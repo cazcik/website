@@ -15,3 +15,7 @@ assets = { directory = ".worker-next/assets", binding = "ASSETS" }
 routes = [
     { pattern = "cazcik.com", custom_domain = true }
 ]
+
+# Workers logs
+[observability]
+enabled = true

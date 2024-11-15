@@ -21,15 +21,35 @@ export default function IndexPage() {
         </h2>
         <div className="flex flex-col space-y-3">
           <div>
-            <p>solus</p>
-            <p className="text-neutral-500">
-              open source security platform for all.
-            </p>
+            <Link
+              className="group"
+              target="_blank"
+              rel="noopener norefferrer"
+              href="https://trysquads.com"
+            >
+              <div className="group flex items-center">
+                <p className="underline-offset-1 group-hover:underline">
+                  squads
+                </p>
+                <RiExternalLinkLine className="ml-1 h-4 w-4 text-neutral-500 group-hover:text-black dark:group-hover:text-white" />
+              </div>
+            </Link>
+            <p className="text-neutral-500">simple sports team management.</p>
           </div>
           <div>
-            <p>simul</p>
+            <Link
+              className="group"
+              target="_blank"
+              rel="noopener norefferrer"
+              href="https://usedomi.com"
+            >
+              <div className="group flex items-center">
+                <p className="underline-offset-1 group-hover:underline">domi</p>
+                <RiExternalLinkLine className="ml-1 h-4 w-4 text-neutral-500 group-hover:text-black dark:group-hover:text-white" />
+              </div>
+            </Link>
             <p className="text-neutral-500">
-              open source security platform for security teams.
+              simple homeschool teacher assistant.
             </p>
           </div>
         </div>
