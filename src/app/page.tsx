@@ -5,7 +5,7 @@ export default function IndexPage() {
   return (
     <div className="flex flex-col space-y-7">
       <div>
-        <h1 className="mb-2 text-xl font-semibold text-black dark:text-white">
+        <h1 className="mb-2 text-xl font-medium text-black dark:text-white">
           zac wojcik
         </h1>
         <p className="text-neutral-500">
