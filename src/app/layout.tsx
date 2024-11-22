@@ -5,19 +5,19 @@ import localFont from "next/font/local";
 
 import "./globals.css";
 
-const source = localFont({
+const inter = localFont({
   src: [
     {
-      path: "source-sans-3vf-upright.woff2",
+      path: "inter-var-roman.woff2",
       style: "normal",
     },
     {
-      path: "source-sans-3vf-italic.woff2",
+      path: "inter-var-italic.woff2",
       style: "italic",
     },
   ],
   display: "swap",
-  variable: "--font-source",
+  variable: "--font-inter",
 });
 
 export const metadata: Metadata = {
@@ -68,10 +68,10 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${source.variable} scroll-smooth bg-white text-black antialiased dark:bg-black dark:text-white`}
+      className={`${inter.variable} scroll-smooth bg-white text-black antialiased dark:bg-black dark:text-white`}
     >
       <body>
-        <div className="mx-auto mb-20 flex max-w-xl flex-col md:mt-20 md:max-w-2xl md:flex-row lg:max-w-4xl">
+        <div className="mx-auto mb-20 flex max-w-lg flex-col md:mt-20 md:max-w-xl md:flex-row lg:max-w-3xl">
           <header className="bg-white px-5 py-5 md:py-0 dark:bg-black">
             <div className="flex items-center gap-x-5 md:flex-col md:items-end md:justify-normal md:gap-x-0 md:gap-y-8">
               <Link href="/" className="flex">

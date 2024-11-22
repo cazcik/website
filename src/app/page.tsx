@@ -25,6 +25,22 @@ export default function IndexPage() {
               className="group"
               target="_blank"
               rel="noopener norefferrer"
+              href="https://wiards.io"
+            >
+              <div className="group flex items-center">
+                <p className="underline-offset-1 group-hover:underline">
+                  wiards
+                </p>
+                <RiExternalLinkLine className="ml-1 h-4 w-4 text-neutral-500 group-hover:text-black dark:group-hover:text-white" />
+              </div>
+            </Link>
+            <p className="text-neutral-500">security operations, empowered.</p>
+          </div>
+          <div>
+            <Link
+              className="group"
+              target="_blank"
+              rel="noopener norefferrer"
               href="https://trysquads.com"
             >
               <div className="group flex items-center">
@@ -34,22 +50,8 @@ export default function IndexPage() {
                 <RiExternalLinkLine className="ml-1 h-4 w-4 text-neutral-500 group-hover:text-black dark:group-hover:text-white" />
               </div>
             </Link>
-            <p className="text-neutral-500">simple sports team management.</p>
-          </div>
-          <div>
-            <Link
-              className="group"
-              target="_blank"
-              rel="noopener norefferrer"
-              href="https://usedomi.com"
-            >
-              <div className="group flex items-center">
-                <p className="underline-offset-1 group-hover:underline">domi</p>
-                <RiExternalLinkLine className="ml-1 h-4 w-4 text-neutral-500 group-hover:text-black dark:group-hover:text-white" />
-              </div>
-            </Link>
             <p className="text-neutral-500">
-              simple homeschool teacher assistant.
+              hockey league and team management.
             </p>
           </div>
         </div>
@@ -60,19 +62,27 @@ export default function IndexPage() {
         </h2>
         <div className="flex flex-col space-y-3">
           <div>
-            <p className="text-neutral-500">2024 ﹣ now</p>
+            <p className="text-sm text-neutral-500">2024 ﹣ now</p>
+            <p>founder, ceo, wojicorp.</p>
+          </div>
+          <div>
+            <p className="text-sm text-neutral-500">2024 ﹣ now</p>
             <p>security engineer ii, application security, health insurance.</p>
           </div>
           <div>
-            <p className="text-neutral-500">2022 ﹣ 2024</p>
+            <p className="text-sm text-neutral-500">2023 ﹣ now</p>
+            <p>founder, ceo, wiards.</p>
+          </div>
+          <div>
+            <p className="text-sm text-neutral-500">2022 ﹣ 2024</p>
             <p>application security engineer, life sciences.</p>
           </div>
           <div>
-            <p className="text-neutral-500">2021 ﹣ 2022</p>
+            <p className="text-sm text-neutral-500">2021 ﹣ 2022</p>
             <p>security engineer, security service provider.</p>
           </div>
           <div>
-            <p className="text-neutral-500">2018 ﹣ 2021</p>
+            <p className="text-sm text-neutral-500">2018 ﹣ 2021</p>
             <p>security analyst, it service provider.</p>
           </div>
         </div>
@@ -89,7 +99,7 @@ export default function IndexPage() {
               rel="noopener norefferrer"
               href="https://github.com/cazcik"
             >
-              <p className="text-neutral-500">github</p>
+              <p className="text-sm text-neutral-500">github</p>
               <div className="group flex items-center">
                 <p className="underline-offset-1 group-hover:underline">
                   github.com/cazcik
@@ -105,7 +115,7 @@ export default function IndexPage() {
               rel="noopener norefferrer"
               href="https://x.com/cazcik"
             >
-              <p className="text-neutral-500">x</p>
+              <p className="text-sm text-neutral-500">x</p>
               <div className="group flex items-center">
                 <p className="underline-offset-1 group-hover:underline">
                   x.com/cazcik
@@ -121,7 +131,7 @@ export default function IndexPage() {
               rel="noopener norefferrer"
               href="https://www.threads.net/@cazcik"
             >
-              <p className="text-neutral-500">threads</p>
+              <p className="text-sm text-neutral-500">threads</p>
               <div className="group flex items-center">
                 <p className="underline-offset-1 group-hover:underline">
                   threads.net/@cazcik
@@ -137,7 +147,7 @@ export default function IndexPage() {
               rel="noopener norefferrer"
               href="https://bsky.app/profile/cazcik.com"
             >
-              <p className="text-neutral-500">bluesky</p>
+              <p className="text-sm text-neutral-500">bluesky</p>
               <div className="group flex items-center">
                 <p className="underline-offset-1 group-hover:underline">
                   bsky.app/profile/cazcik.com
