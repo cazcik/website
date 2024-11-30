@@ -15,47 +15,7 @@ export default function IndexPage() {
           family.
         </p>
       </div>
-      <div>
-        <h2 className="mb-3 text-xl font-medium text-black dark:text-white">
-          projects
-        </h2>
-        <div className="flex flex-col space-y-3">
-          <div>
-            <Link
-              className="group"
-              target="_blank"
-              rel="noopener norefferrer"
-              href="https://wiards.io"
-            >
-              <div className="group flex items-center">
-                <p className="underline-offset-1 group-hover:underline">
-                  wiards
-                </p>
-                <RiExternalLinkLine className="ml-1 h-4 w-4 text-neutral-500 group-hover:text-black dark:group-hover:text-white" />
-              </div>
-            </Link>
-            <p className="text-neutral-500">security operations, empowered.</p>
-          </div>
-          <div>
-            <Link
-              className="group"
-              target="_blank"
-              rel="noopener norefferrer"
-              href="https://trysquads.com"
-            >
-              <div className="group flex items-center">
-                <p className="underline-offset-1 group-hover:underline">
-                  squads
-                </p>
-                <RiExternalLinkLine className="ml-1 h-4 w-4 text-neutral-500 group-hover:text-black dark:group-hover:text-white" />
-              </div>
-            </Link>
-            <p className="text-neutral-500">
-              hockey league and team management.
-            </p>
-          </div>
-        </div>
-      </div>
+
       <div>
         <h2 className="mb-3 text-xl font-medium text-black dark:text-white">
           work
@@ -68,10 +28,6 @@ export default function IndexPage() {
           <div>
             <p className="text-sm text-neutral-500">2024 ﹣ now</p>
             <p>security engineer ii, application security, health insurance.</p>
-          </div>
-          <div>
-            <p className="text-sm text-neutral-500">2023 ﹣ now</p>
-            <p>founder, ceo, wiards.</p>
           </div>
           <div>
             <p className="text-sm text-neutral-500">2022 ﹣ 2024</p>
