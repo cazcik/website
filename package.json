@@ -1,5 +1,5 @@
 {
-  "name": "cazcik",
+  "name": "website",
   "version": "0.0.0",
   "private": true,
   "scripts": {
@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "@remixicon/react": "^4.4.0",
-    "next": "14.2.17",
+    "next": "14.2.18",
     "react": "^18",
     "react-dom": "^18"
   },
@@ -27,7 +27,7 @@
     "prettier-plugin-tailwindcss": "^0.6.8",
     "tailwindcss": "^3.4.14",
     "typescript": "^5.6.3",
-    "wrangler": "^3.83.0"
+    "wrangler": "^3.91.0"
   },
   "prettier": {
     "plugins": [
