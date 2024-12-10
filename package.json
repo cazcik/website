@@ -17,17 +17,17 @@
     "react-dom": "^18"
   },
   "devDependencies": {
-    "@cloudflare/workers-types": "^4.20241127.0",
+    "@cloudflare/workers-types": "^4.20241205.0",
     "@opennextjs/cloudflare": "^0.2.1",
     "@types/node": "^22.10.1",
-    "@types/react": "^18.3.12",
-    "@types/react-dom": "^18.3.1",
+    "@types/react": "^18.3.14",
+    "@types/react-dom": "^18.3.3",
     "postcss": "^8.4.49",
-    "prettier": "^3.4.1",
+    "prettier": "^3.4.2",
     "prettier-plugin-tailwindcss": "^0.6.9",
-    "tailwindcss": "^3.4.15",
+    "tailwindcss": "^3.4.16",
     "typescript": "^5.7.2",
-    "wrangler": "^3.91.0"
+    "wrangler": "^3.95.0"
   },
   "prettier": {
     "plugins": [
