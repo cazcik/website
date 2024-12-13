@@ -22,30 +22,30 @@ export default function IndexPage() {
         </h2>
         <div className="flex flex-col space-y-3">
           <div>
-            <p className="text-sm text-neutral-500">2024 ﹣ now</p>
+            <p className="text-sm text-neutral-500">2024 &mdash; now</p>
             <p>founder, ceo, wojicorp.</p>
           </div>
           <div>
-            <p className="text-sm text-neutral-500">2024 ﹣ now</p>
+            <p className="text-sm text-neutral-500">2024 &mdash; now</p>
             <p>security engineer ii, application security, health insurance.</p>
           </div>
           <div>
-            <p className="text-sm text-neutral-500">2022 ﹣ 2024</p>
+            <p className="text-sm text-neutral-500">2022 &mdash; 2024</p>
             <p>application security engineer, life sciences.</p>
           </div>
           <div>
-            <p className="text-sm text-neutral-500">2021 ﹣ 2022</p>
+            <p className="text-sm text-neutral-500">2021 &mdash; 2022</p>
             <p>security engineer, security service provider.</p>
           </div>
           <div>
-            <p className="text-sm text-neutral-500">2018 ﹣ 2021</p>
+            <p className="text-sm text-neutral-500">2018 &mdash; 2021</p>
             <p>security analyst, it service provider.</p>
           </div>
         </div>
       </div>
       <div>
         <h2 className="mb-3 text-xl font-medium text-black dark:text-white">
-          links
+          socials
         </h2>
         <div className="flex flex-col space-y-3">
           <div className="flex">
