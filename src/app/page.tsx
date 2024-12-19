@@ -49,12 +49,12 @@ export default function IndexPage() {
               className="group"
               target="_blank"
               rel="noopener norefferrer"
-              href="https://github.com/cazcik"
+              href="https://x.com/cazcik"
             >
-              <p className="text-sm text-neutral-500">github</p>
+              <p className="text-sm text-neutral-500">x</p>
               <div className="group flex items-center">
                 <p className="underline-offset-1 group-hover:underline">
-                  github.com/cazcik
+                  x.com/cazcik
                 </p>
                 <RiExternalLinkLine className="ml-1 h-4 w-4 text-neutral-500 group-hover:text-black dark:group-hover:text-white" />
               </div>
@@ -65,12 +65,12 @@ export default function IndexPage() {
               className="group"
               target="_blank"
               rel="noopener norefferrer"
-              href="https://x.com/cazcik"
+              href="https://github.com/cazcik"
             >
-              <p className="text-sm text-neutral-500">x</p>
+              <p className="text-sm text-neutral-500">github</p>
               <div className="group flex items-center">
                 <p className="underline-offset-1 group-hover:underline">
-                  x.com/cazcik
+                  github.com/cazcik
                 </p>
                 <RiExternalLinkLine className="ml-1 h-4 w-4 text-neutral-500 group-hover:text-black dark:group-hover:text-white" />
               </div>
