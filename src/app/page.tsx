@@ -23,10 +23,6 @@ export default function IndexPage() {
         <div className="flex flex-col space-y-3">
           <div>
             <p className="text-sm text-neutral-500">2024 &mdash; now</p>
-            <p>founder, ceo, wojicorp.</p>
-          </div>
-          <div>
-            <p className="text-sm text-neutral-500">2024 &mdash; now</p>
             <p>security engineer ii, application security, health insurance.</p>
           </div>
           <div>
