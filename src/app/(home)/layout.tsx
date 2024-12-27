@@ -1,14 +1,12 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Metadata } from "next/types";
+import NavLink from "./_components/nav-link";
 
-import NavLink from "./(home)/_components/nav-link";
-
-export const metadata: Metadata = {
-  title: "Not found",
-};
-
-export default function Custom404() {
+export default function HomeLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
   return (
     <div className="mx-auto mb-20 flex max-w-lg flex-col md:mt-20 md:max-w-xl md:flex-row lg:max-w-3xl">
       <header className="bg-white px-5 py-5 md:py-0 dark:bg-black">
@@ -27,16 +25,7 @@ export default function Custom404() {
           </div>
         </div>
       </header>
-      <main className="w-full px-5 pt-5 md:ml-5">
-        <div className="flex flex-col space-y-7">
-          <div>
-            <h1 className="mb-2 text-xl font-medium text-black dark:text-white">
-              404
-            </h1>
-            <p className="text-neutral-500">oops, we can't find that page</p>
-          </div>
-        </div>
-      </main>
+      <main className="w-full px-5 pt-5 md:ml-5">{children}</main>
     </div>
   );
 }
