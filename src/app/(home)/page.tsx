@@ -155,7 +155,7 @@ export default async function IndexPage() {
         <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4">
           <div className="rounded-lg border border-neutral-200 p-3 dark:border-neutral-800">
             <div>
-              <h4 className="text-sm font-medium text-neutral-500">rank</h4>
+              <h4 className="text-sm text-neutral-500">rank</h4>
               <p className="text-xl text-black dark:text-white">
                 {hackTheBoxProfile && hackTheBoxProfile.profile.rank
                   ? hackTheBoxProfile.profile.rank.toLowerCase()
@@ -180,7 +180,7 @@ export default async function IndexPage() {
           </div>
           <div className="rounded-lg border border-neutral-200 p-3 dark:border-neutral-800">
             <div>
-              <h4 className="text-sm font-medium text-neutral-500">rank</h4>
+              <h4 className="text-sm text-neutral-500">rank</h4>
               <p className="text-xl text-black dark:text-white">
                 {tryHackMeProfile && tryHackMeProfile.data.rank
                   ? tryHackMeProfile.data.rank
@@ -205,7 +205,7 @@ export default async function IndexPage() {
           </div>
           <div className="rounded-lg border border-neutral-200 p-3 dark:border-neutral-800">
             <div>
-              <h4 className="text-sm font-medium text-neutral-500">rank</h4>
+              <h4 className="text-sm text-neutral-500">rank</h4>
               <p className="text-xl text-black dark:text-white">n/a</p>
               <div className="mt-1 flex">
                 <Link
@@ -226,7 +226,7 @@ export default async function IndexPage() {
           </div>
           <div className="rounded-lg border border-neutral-200 p-3 dark:border-neutral-800">
             <div>
-              <h4 className="text-sm font-medium text-neutral-500">rank</h4>
+              <h4 className="text-sm text-neutral-500">rank</h4>
               <p className="text-xl text-black dark:text-white">
                 {hackerOneProfile &&
                 hackerOneProfile.data.user.statistics_snapshot

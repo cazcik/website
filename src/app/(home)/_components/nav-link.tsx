@@ -17,7 +17,7 @@ export default function NavLink({
       href={href}
       className={clsx(
         active
-          ? "text-white"
+          ? "text-black dark:text-white"
           : "text-neutral-500 hover:text-neutral-700 dark:hover:text-neutral-300",
         "",
       )}
