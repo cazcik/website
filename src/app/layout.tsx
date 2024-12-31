@@ -1,7 +1,5 @@
-import Link from "next/link";
-import Image from "next/image";
-import type { Metadata, Viewport } from "next";
 import localFont from "next/font/local";
+import type { Metadata, Viewport } from "next";
 
 import "./globals.css";
 
