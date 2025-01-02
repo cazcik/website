@@ -7,6 +7,8 @@ import {
   getTryHackMeProfile,
 } from "./actions";
 
+export const revalidate = 60;
+
 export default async function IndexPage() {
   const hackTheBoxProfile = await getHackTheBoxProfile();
   const tryHackMeProfile = await getTryHackMeProfile();
