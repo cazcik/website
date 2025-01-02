@@ -7,8 +7,6 @@ import {
   getTryHackMeProfile,
 } from "./actions";
 
-export const revalidate = 60;
-
 export default async function IndexPage() {
   const hackTheBoxProfile = await getHackTheBoxProfile();
   const tryHackMeProfile = await getTryHackMeProfile();
@@ -27,7 +25,6 @@ export default async function IndexPage() {
           family.
         </p>
       </div>
-
       <div>
         <h2 className="mb-3 text-xl font-medium text-black dark:text-white">
           stats
