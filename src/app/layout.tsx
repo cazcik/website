@@ -21,31 +21,31 @@ const inter = localFont({
 export const metadata: Metadata = {
   metadataBase: new URL("https://cazcik.com"),
   title: {
-    default: "Zac Wojcik",
-    template: "%s - Zac Wojcik",
+    default: "@cazcik",
+    template: "%s - @cazcik",
   },
   description:
-    "My humble home on the collection of tubes we call the internet.",
+    "my humble home on the collection of tubes we call the internet.",
   openGraph: {
     title: {
-      default: "Zac Wojcik",
-      template: "%s - Zac Wojcik",
+      default: "@cazcik",
+      template: "%s - @cazcik",
     },
     description:
-      "My humble home on the collection of tubes we call the internet.",
+      "my humble home on the collection of tubes we call the internet.",
     url: "https://cazcik.com",
-    siteName: "Zac Wojcik",
+    siteName: "@cazcik",
     locale: "en_US",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
     title: {
-      default: "Zac Wojcik",
-      template: "%s - Zac Wojcik",
+      default: "@cazcik",
+      template: "%s - @cazcik",
     },
     description:
-      "My humble home on the collection of tubes we call the internet.",
+      "my humble home on the collection of tubes we call the internet.",
     creator: "@cazcik",
   },
 };
