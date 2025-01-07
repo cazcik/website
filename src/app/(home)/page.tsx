@@ -43,7 +43,7 @@ export default async function IndexPage() {
                   className="group"
                   target="_blank"
                   rel="noopener norefferrer"
-                  href="https://app.hackthebox.com/profile/cazcik"
+                  href="https://app.hackthebox.com/users/2184403"
                 >
                   <div className="group flex items-center">
                     <p className="text-sm underline-offset-1 group-hover:underline">
@@ -137,7 +137,7 @@ export default async function IndexPage() {
         <div className="flex flex-col space-y-3">
           <div>
             <p className="text-sm text-neutral-500">2024 &mdash; now</p>
-            <p>security engineer ii, appsec, health insurance.</p>
+            <p>security engineer ii, appsec, health care.</p>
           </div>
           <div>
             <p className="text-sm text-neutral-500">2022 &mdash; now</p>
