@@ -1,4 +1,20 @@
-import Link from "next/link";
+import { Metadata } from "next/types";
+
+export const metadata: Metadata = {
+  title: "blog",
+  description:
+    "on occasion i enjoy writing about stuff i'm passionate about such as security, open source, application security, business, and startups.",
+  openGraph: {
+    title: "blog",
+    description:
+      "on occasion i enjoy writing about stuff i'm passionate about such as security, open source, application security, business, and startups.",
+  },
+  twitter: {
+    title: "blog",
+    description:
+      "on occasion i enjoy writing about stuff i'm passionate about such as security, open source, application security, business, and startups.",
+  },
+};
 
 export default function BlogPage() {
   return (
