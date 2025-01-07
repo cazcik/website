@@ -137,7 +137,7 @@ export default async function IndexPage() {
         <div className="flex flex-col space-y-3">
           <div>
             <p className="text-sm text-neutral-500">2024 &mdash; now</p>
-            <p>security engineer ii, application security, health insurance.</p>
+            <p>security engineer ii, appsec, health insurance.</p>
           </div>
           <div>
             <p className="text-sm text-neutral-500">2022 &mdash; now</p>
@@ -146,6 +146,10 @@ export default async function IndexPage() {
           <div>
             <p className="text-sm text-neutral-500">2022 &mdash; 2024</p>
             <p>application security engineer, life sciences.</p>
+          </div>
+          <div>
+            <p className="text-sm text-neutral-500">2022 &mdash; 2023</p>
+            <p>co-lead, detroit chapter, #misec.</p>
           </div>
           <div>
             <p className="text-sm text-neutral-500">2021 &mdash; 2022</p>
