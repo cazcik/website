@@ -36,11 +36,11 @@
 }
 
 .prose ul li {
-  @apply my-3 before:mr-2 before:text-neutral-500 before:content-['\2014'];
+  @apply my-3 text-neutral-500 before:mr-2 before:content-['\2014'];
 }
 
 .prose ol li {
-  @apply my-3 before:mr-2 before:text-neutral-500 before:content-['n.'];
+  @apply my-3 text-neutral-500 before:mr-2 before:content-['n.'];
 }
 
 .prose em {

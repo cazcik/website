@@ -17,7 +17,7 @@ export default function BlogPage() {
           recent
         </h2>
         <div className="flex flex-col space-y-1">
-          <div className="flex">
+          {/* <div className="flex">
             <Link
               href="/blog/hello-world"
               className="group flex items-center gap-x-2"
@@ -27,7 +27,10 @@ export default function BlogPage() {
                 hello world
               </p>
             </Link>
-          </div>
+          </div> */}
+          <p className="italic text-neutral-500">
+            no posts yet, check back soon.
+          </p>
         </div>
       </div>
     </div>
