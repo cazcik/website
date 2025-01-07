@@ -11,7 +11,9 @@ export default function NavLink({
   href: string;
   children: React.ReactNode;
 }>) {
-  const active = usePathname() === href;
+  const active =
+    href === "/" ? usePathname() === "/" : usePathname().startsWith(href);
+
   return (
     <Link
       href={href}

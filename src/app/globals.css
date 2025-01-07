@@ -10,3 +10,39 @@
     color-scheme: dark;
   }
 }
+
+.prose h1 {
+  @apply my-3 pt-3 text-xl font-medium text-black dark:text-white;
+}
+
+.prose h2 {
+  @apply my-3 pt-3 text-lg font-medium text-black dark:text-white;
+}
+
+.prose h3 {
+  @apply my-3 pt-3 text-lg text-black dark:text-white;
+}
+
+.prose a {
+  @apply text-black hover:underline dark:text-white;
+}
+
+.prose p {
+  @apply my-3 text-neutral-500;
+}
+
+.prose strong {
+  @apply font-bold text-neutral-600 dark:text-neutral-400;
+}
+
+.prose ul li {
+  @apply my-3 before:mr-2 before:text-neutral-500 before:content-['\2014'];
+}
+
+.prose ol li {
+  @apply my-3 before:mr-2 before:text-neutral-500 before:content-['n.'];
+}
+
+.prose em {
+  @apply italic;
+}
