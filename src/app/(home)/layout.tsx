@@ -1,5 +1,5 @@
-import Link from "next/link";
 import Image from "next/image";
+
 import NavLink from "./_components/nav-link";
 
 export default function HomeLayout({
@@ -22,6 +22,7 @@ export default function HomeLayout({
           </div>
           <div className="flex gap-x-5 px-2 md:flex-col md:items-end md:gap-x-0 md:gap-y-3">
             <NavLink href="/">home</NavLink>
+            <NavLink href="/blog">blog</NavLink>
           </div>
         </div>
       </header>
