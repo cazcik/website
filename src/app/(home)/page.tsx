@@ -141,7 +141,7 @@ export default async function IndexPage() {
           </div>
           <div>
             <p className="text-sm text-neutral-500">2022 &mdash; now</p>
-            <p>founder, neutrala.</p>
+            <p>founder, wiards.</p>
           </div>
           <div>
             <p className="text-sm text-neutral-500">2022 &mdash; 2024</p>
