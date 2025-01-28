@@ -1,5 +1,7 @@
 "use server";
 
+import { revalidatePath } from "next/cache";
+
 import { HackTheBoxProfile, TryHackMeProfile, HackerOneProfile } from "@/types";
 
 export const getHackTheBoxProfile = async (): Promise<HackTheBoxProfile> => {
@@ -10,6 +12,9 @@ export const getHackTheBoxProfile = async (): Promise<HackTheBoxProfile> => {
         accept: "application/json",
         authorization: `Bearer ${process.env.HTB_API_KEY}`,
       },
+      next: {
+        revalidate: 60,
+      },
     },
   );
   const data: HackTheBoxProfile = await res.json();
@@ -19,8 +24,14 @@ export const getHackTheBoxProfile = async (): Promise<HackTheBoxProfile> => {
 export const getTryHackMeProfile = async (): Promise<TryHackMeProfile> => {
   const res = await fetch(
     "https://tryhackme.com/api/v2/public-profile?username=cazcik",
+    {
+      next: {
+        revalidate: 60,
+      },
+    },
   );
   const data: TryHackMeProfile = await res.json();
+
   return data;
 };
 
@@ -41,7 +52,11 @@ export const getHackerOneProfile = async (): Promise<HackerOneProfile> => {
       query:
         "query UserProfileStatsCard($username: String!, $snapshotType: UserStatisticsSnapshotTypeEnum!) {\n  user(username: $username) {\n    id\n    statistics_snapshot(snapshot_type: $snapshotType) {\n      id\n      signal\n      signal_percentile\n      impact\n      impact_percentile\n      reputation\n      rank\n      __typename\n    }\n    __typename\n  }\n}\n",
     }),
+    next: {
+      revalidate: 60,
+    },
   });
   const data: HackerOneProfile = await res.json();
+
   return data;
 };

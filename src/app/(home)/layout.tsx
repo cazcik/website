@@ -14,10 +14,10 @@ export default function HomeLayout({
           <div className="flex">
             <Image
               src="/avatar.jpg"
-              width={2652}
-              height={3000}
+              width={2968}
+              height={3163}
               className="size-12 items-end rounded-full md:size-14"
-              alt="a man wearing a black cap holding a black dog"
+              alt="a man wearing sun glasses looking off to the left on a beach"
             />
           </div>
           <div className="flex gap-x-5 px-2 md:flex-col md:items-end md:gap-x-0 md:gap-y-3">
