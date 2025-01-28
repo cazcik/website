@@ -7,6 +7,59 @@ import {
   getTryHackMeProfile,
 } from "./actions";
 
+const socials = [
+  {
+    title: "x",
+    url: "https://x.com/cazcik",
+    preview: "x.com/cazcik",
+  },
+  {
+    title: "twitch",
+    url: "https://www.twitch.tv/cazcik",
+    preview: "twitch.tv/cazcik",
+  },
+  {
+    title: "github",
+    url: "https://github.com/cazcik",
+    preview: "github.com/cazcik",
+  },
+  {
+    title: "tiktok",
+    url: "https://www.tiktok.com/@cazcik",
+    preview: "tiktok.com/@cazcik",
+  },
+  {
+    title: "threads",
+    url: "https://www.threads.net/@cazcik",
+    preview: "threads.net/@cazcik",
+  },
+  {
+    title: "facebook",
+    url: "https://www.facebook.com/cazcik",
+    preview: "facebook.com/cazcik",
+  },
+  {
+    title: "youtube",
+    url: "https://www.youtube.com/@cazcik",
+    preview: "youtube.com/@cazcik",
+  },
+  {
+    title: "instagram",
+    url: "https://instagram.com/cazcik",
+    preview: "instagram.com/cazcik",
+  },
+  {
+    title: "linkedin",
+    url: "https://www.linkedin.com/in/cazcik/",
+    preview: "linkedin.com/in/cazcik",
+  },
+  {
+    title: "bluesky",
+    url: "https://bsky.app/profile/cazcik.com",
+    preview: "bsky.app/profile/cazcik.com",
+  },
+];
+
 export default async function IndexPage() {
   const hackTheBoxProfile = await getHackTheBoxProfile();
   const tryHackMeProfile = await getTryHackMeProfile();
@@ -129,7 +182,6 @@ export default async function IndexPage() {
           </div>
         </div>
       </div>
-
       <div>
         <h2 className="mb-3 text-xl font-medium text-black dark:text-white">
           work
@@ -166,70 +218,24 @@ export default async function IndexPage() {
           socials
         </h2>
         <div className="flex flex-col space-y-3">
-          <div className="flex">
-            <Link
-              className="group"
-              target="_blank"
-              rel="noopener norefferrer"
-              href="https://x.com/cazcik"
-            >
-              <p className="text-sm text-neutral-500">x</p>
-              <div className="group flex items-center">
-                <p className="underline-offset-1 group-hover:underline">
-                  x.com/cazcik
-                </p>
-                <RiExternalLinkLine className="ml-1 h-4 w-4 text-neutral-500 group-hover:text-black dark:group-hover:text-white" />
-              </div>
-            </Link>
-          </div>
-          <div className="flex">
-            <Link
-              className="group"
-              target="_blank"
-              rel="noopener norefferrer"
-              href="https://github.com/cazcik"
-            >
-              <p className="text-sm text-neutral-500">github</p>
-              <div className="group flex items-center">
-                <p className="underline-offset-1 group-hover:underline">
-                  github.com/cazcik
-                </p>
-                <RiExternalLinkLine className="ml-1 h-4 w-4 text-neutral-500 group-hover:text-black dark:group-hover:text-white" />
-              </div>
-            </Link>
-          </div>
-          <div className="flex">
-            <Link
-              className="group"
-              target="_blank"
-              rel="noopener norefferrer"
-              href="https://www.threads.net/@cazcik"
-            >
-              <p className="text-sm text-neutral-500">threads</p>
-              <div className="group flex items-center">
-                <p className="underline-offset-1 group-hover:underline">
-                  threads.net/@cazcik
-                </p>
-                <RiExternalLinkLine className="ml-1 h-4 w-4 text-neutral-500 group-hover:text-black dark:group-hover:text-white" />
-              </div>
-            </Link>
-          </div>
-          <div className="flex">
-            <Link
-              className="group"
-              target="_blank"
-              rel="noopener norefferrer"
-              href="https://bsky.app/profile/cazcik.com"
-            >
-              <p className="text-sm text-neutral-500">bluesky</p>
-              <div className="group flex items-center">
-                <p className="underline-offset-1 group-hover:underline">
-                  bsky.app/profile/cazcik.com
-                </p>
-                <RiExternalLinkLine className="ml-1 h-4 w-4 text-neutral-500 group-hover:text-black dark:group-hover:text-white" />
-              </div>
-            </Link>
-          </div>
+          {socials.map((s) => (
+            <div key={s.url} className="flex">
+              <Link
+                className="group"
+                target="_blank"
+                rel="noopener norefferrer"
+                href={s.url}
+              >
+                <p className="text-sm text-neutral-500">{s.title}</p>
+                <div className="group flex items-center">
+                  <p className="underline-offset-1 group-hover:underline">
+                    {s.preview}
+                  </p>
+                  <RiExternalLinkLine className="ml-1 h-4 w-4 text-neutral-500 group-hover:text-black dark:group-hover:text-white" />
+                </div>
+              </Link>
+            </div>
+          ))}
         </div>
       </div>
     </div>
