@@ -39,13 +39,13 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-pnpm-store-
 
-      - name: Cache build output
-        uses: actions/cache@v3
-        with:
-          path: .astro
-          key: ${{ runner.os }}-astro-${{ hashFiles('src/**/*.{astro,js,jsx,ts,tsx,md,mdx}') }}
-          restore-keys: |
-            ${{ runner.os }}-astro-
+      #   - name: Cache build output
+      #     uses: actions/cache@v3
+      #     with:
+      #       path: .astro
+      #       key: ${{ runner.os }}-astro-${{ hashFiles('src/**/*.{astro,js,jsx,ts,tsx,md,mdx}') }}
+      #       restore-keys: |
+      #         ${{ runner.os }}-astro-
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
