@@ -4,9 +4,7 @@ import {
   RiGithubLine,
   RiInstagramLine,
   RiLinkedinLine,
-  RiThreadsLine,
   RiTwitterXLine,
-  RiYoutubeLine,
 } from "@remixicon/react";
 
 export default function Index() {
@@ -15,7 +13,9 @@ export default function Index() {
       <div className="m-auto px-5">
         <div className="max-w-lg mx-auto space-y-5">
           <section>
-            <h1 className="text-black dark:text-white text-lg">@cazcik</h1>
+            <h1 className="text-black dark:text-white text-lg font-medium">
+              @cazcik
+            </h1>
             <p className="text-lg text-neutral-500 dark:text-neutral-400">
               I'm an application security engineer helping developers write
               secure code, design secure systems, and build for resiliency.
@@ -45,13 +45,6 @@ export default function Index() {
                 <RiInstagramLine className="text-black dark:text-white hover:text-neutral-700 dark:hover:text-neutral-300 size-5" />
               </Link>
               <Link
-                href="https://threads.net/cazcik"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <RiThreadsLine className="text-black dark:text-white hover:text-neutral-700 dark:hover:text-neutral-300 size-5" />
-              </Link>
-              <Link
                 href="https://linkedin.com/in/cazcik"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -64,13 +57,6 @@ export default function Index() {
                 rel="noopener noreferrer"
               >
                 <RiBlueskyLine className="text-black dark:text-white hover:text-neutral-700 dark:hover:text-neutral-300 size-5" />
-              </Link>
-              <Link
-                href="https://youtube.com/@cazcik"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <RiYoutubeLine className="text-black dark:text-white hover:text-neutral-700 dark:hover:text-neutral-300 size-5" />
               </Link>
             </div>
           </section>
