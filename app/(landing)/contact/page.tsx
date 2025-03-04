@@ -6,12 +6,8 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
   return (
-    <div className="px-5 py-6 space-y-5">
-      <section>
-        <h1 className="text-black dark:text-white text-lg pb-3 lowercase">
-          Contact
-        </h1>
-      </section>
-    </div>
+    <article className="prose prose-sm prose-neutral dark:prose-invert px-5 py-6 lowercase">
+      <h1>Contact</h1>
+    </article>
   );
 }

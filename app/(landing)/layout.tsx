@@ -1,5 +1,12 @@
 import NavLink from "./_components/nav-link";
 import MobileMenu from "./_components/mobile-menu";
+import {
+  RiGithubLine,
+  RiTwitterXLine,
+  RiLinkedinLine,
+  RiBlueskyLine,
+} from "@remixicon/react";
+import Link from "next/link";
 
 const navigation = [
   {
@@ -37,9 +44,9 @@ export default function LandingLayout({
 
   return (
     <div className="flex min-h-dvh flex-col">
-      <header className="px-5 py-3 border-b border-neutral-200 dark:border-neutral-800">
-        <div className="flex items-center gap-x-10">
-          <nav className="hidden sm:flex items-center gap-x-7">
+      <header className="border-b border-neutral-200 px-5 py-3 dark:border-neutral-800">
+        <div className="flex max-w-2xl items-center gap-x-10">
+          <nav className="hidden items-center gap-x-7 sm:flex">
             <NavLink href="/">@cazcik</NavLink>
             {navigation.map((item) => (
               <NavLink key={item.href} href={item.href}>
@@ -47,7 +54,7 @@ export default function LandingLayout({
               </NavLink>
             ))}
           </nav>
-          <div className="sm:hidden flex items-center justify-between w-full">
+          <div className="flex w-full items-center justify-between sm:hidden">
             <div>
               <NavLink href="/">@cazcik</NavLink>
             </div>
@@ -58,12 +65,14 @@ export default function LandingLayout({
         </div>
       </header>
       <main className="grow">
-        <div className="max-w-lg">{children}</div>
+        <div className="max-w-2xl">{children}</div>
       </main>
-      <footer className="px-5 py-3 border-t border-neutral-200 dark:border-neutral-800">
-        <p className="text-center uppercase text-xs">
-          &copy; {currentYear} Zac Wojcik
-        </p>
+      <footer className="border-t border-neutral-200 px-5 py-3 dark:border-neutral-800">
+        <div className="max-w-2xl">
+          <div>
+            <p className="text-xs uppercase">&copy; {currentYear} Zac Wojcik</p>
+          </div>
+        </div>
       </footer>
     </div>
   );
