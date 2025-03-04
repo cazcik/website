@@ -1,6 +1,33 @@
 import NavLink from "./_components/nav-link";
 import MobileMenu from "./_components/mobile-menu";
 
+const navigation = [
+  {
+    title: "About",
+    href: "/about",
+  },
+  {
+    title: "Blog",
+    href: "/blog",
+  },
+  {
+    title: "Courses",
+    href: "/courses",
+  },
+  {
+    title: "Podcasts",
+    href: "/podcasts",
+  },
+  {
+    title: "Uses",
+    href: "/uses",
+  },
+  {
+    title: "Contact",
+    href: "/contact",
+  },
+];
+
 export default function LandingLayout({
   children,
 }: Readonly<{
@@ -14,19 +41,18 @@ export default function LandingLayout({
         <div className="flex items-center gap-x-10">
           <nav className="hidden sm:flex items-center gap-x-7">
             <NavLink href="/">@cazcik</NavLink>
-            <NavLink href="/about">About</NavLink>
-            <NavLink href="/blog">Blog</NavLink>
-            <NavLink href="/courses">Courses</NavLink>
-            <NavLink href="/podcasts">Podcasts</NavLink>
-            <NavLink href="/uses">Uses</NavLink>
-            <NavLink href="/contact">Contact</NavLink>
+            {navigation.map((item) => (
+              <NavLink key={item.href} href={item.href}>
+                {item.title}
+              </NavLink>
+            ))}
           </nav>
           <div className="sm:hidden flex items-center justify-between w-full">
             <div>
               <NavLink href="/">@cazcik</NavLink>
             </div>
             <div>
-              <MobileMenu />
+              <MobileMenu navigation={navigation} />
             </div>
           </div>
         </div>
