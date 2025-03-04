@@ -1,4 +1,5 @@
 import NavLink from "./_components/nav-link";
+import MobileMenu from "./_components/mobile-menu";
 
 export default function LandingLayout({
   children,
@@ -10,8 +11,8 @@ export default function LandingLayout({
   return (
     <div className="flex min-h-dvh flex-col">
       <header className="px-5 py-3 border-b border-neutral-200 dark:border-neutral-800">
-        <div className="hidden sm:flex items-center gap-x-10">
-          <nav className="flex items-center gap-x-7">
+        <div className="flex items-center gap-x-10">
+          <nav className="hidden sm:flex items-center gap-x-7">
             <NavLink href="/">@cazcik</NavLink>
             <NavLink href="/about">About</NavLink>
             <NavLink href="/blog">Blog</NavLink>
@@ -20,6 +21,14 @@ export default function LandingLayout({
             <NavLink href="/uses">Uses</NavLink>
             <NavLink href="/contact">Contact</NavLink>
           </nav>
+          <div className="sm:hidden flex items-center justify-between w-full">
+            <div>
+              <NavLink href="/">@cazcik</NavLink>
+            </div>
+            <div>
+              <MobileMenu />
+            </div>
+          </div>
         </div>
       </header>
       <main className="grow">

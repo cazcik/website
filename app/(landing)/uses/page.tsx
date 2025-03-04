@@ -6,7 +6,7 @@ export const metadata: Metadata = {
 
 export default function UsesPage() {
   return (
-    <div className="px-5 py-12 space-y-5">
+    <div className="px-5 py-6 space-y-5">
       <section>
         <h1 className="text-black dark:text-white text-lg pb-3 lowercase">
           Uses

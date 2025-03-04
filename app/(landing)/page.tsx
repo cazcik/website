@@ -10,7 +10,7 @@ export default function IndexPage() {
   return (
     <div>
       <div>
-        <div className="px-5 py-12 space-y-5">
+        <div className="px-5 py-6 space-y-5">
           <section>
             <h1 className="text-black dark:text-white text-lg pb-3">me</h1>
             <p className="lowercase text-neutral-500 dark:text-neutral-400 pb-5">
