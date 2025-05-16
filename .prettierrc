@@ -1,3 +1,12 @@
 {
-  "plugins": ["prettier-plugin-astro", "prettier-plugin-tailwindcss"]
+  "printWidth": 120,
+  "tabWidth": 2,
+  "useTabs": false,
+  "singleQuote": true,
+  "trailingComma": "all",
+  "arrowParens": "always",
+  "semi": false,
+  "bracketSpacing": true,
+  "jsxBracketSameLine": false,
+  "plugins": ["prettier-plugin-tailwindcss"]
 }
