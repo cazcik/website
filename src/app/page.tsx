@@ -5,7 +5,7 @@ export default function Home() {
         <div className="mx-auto max-w-sm rounded-sm border border-neutral-200 bg-neutral-50 p-10 dark:border-neutral-800 dark:bg-neutral-950">
           <div>
             <h1 className="text-lg font-medium text-black dark:text-white">cazcik</h1>
-            <p className="text-lg text-neutral-500">my humble home on the internet</p>
+            <p className="text-lg text-neutral-500">my humble internet home</p>
           </div>
         </div>
       </div>
