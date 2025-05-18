@@ -25,10 +25,10 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL('https://cazcik.com'),
   title: 'cazcik',
-  description: 'my humble internet home.',
+  description: 'my humble internet home',
   openGraph: {
     title: 'cazcik',
-    description: 'my humble internet home.',
+    description: 'my humble internet home',
     url: 'https://cazcik.com',
     siteName: 'cazcik',
     locale: 'en_US',
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'cazcik',
-    description: 'my humble internet home.',
+    description: 'my humble internet home',
     creator: '@cazcik',
   },
 }
