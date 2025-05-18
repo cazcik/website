@@ -1,4 +1,4 @@
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import { Analytics } from '@vercel/analytics/next'
 import { Geist, Geist_Mono } from 'next/font/google'
 
@@ -14,9 +14,32 @@ const geistMono = Geist_Mono({
   subsets: ['latin'],
 })
 
+export const viewport: Viewport = {
+  themeColor: [
+    { media: '(prefers-color-scheme: light)', color: 'white' },
+    { media: '(prefers-color-scheme: dark)', color: 'black' },
+  ],
+  colorScheme: 'light dark',
+}
+
 export const metadata: Metadata = {
-  title: 'cazcik.com',
+  metadataBase: new URL('https://cazcik.com'),
+  title: 'cazcik',
   description: 'my humble internet home.',
+  openGraph: {
+    title: 'cazcik',
+    description: 'my humble internet home.',
+    url: 'https://cazcik.com',
+    siteName: 'cazcik',
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'cazcik',
+    description: 'my humble internet home.',
+    creator: '@cazcik',
+  },
 }
 
 export default function RootLayout({
