@@ -41,26 +41,10 @@ jobs:
         
     - name: add host to known hosts
       run: |
-        echo "Attempting to connect to: ${{ secrets.DEPLOY_TARGET }}"
-        echo "Testing connectivity..."
-        ping -c 3 ${{ secrets.DEPLOY_TARGET }} || echo "Ping failed, but continuing..."
-        echo "Testing SSH port..."
-        nc -zv ${{ secrets.DEPLOY_TARGET }} 22 || echo "SSH port test failed, but continuing..."
-        echo "Running ssh-keyscan..."
-        ssh-keyscan -H ${{ secrets.DEPLOY_TARGET }} >> ~/.ssh/known_hosts || echo "ssh-keyscan failed, but continuing..."
+        ssh-keyscan -H ${{ secrets.DEPLOY_TARGET }} >> ~/.ssh/known_hosts
         
     - name: deploy to server
       run: |
-        echo "Deploying to target: ${{ secrets.DEPLOY_TARGET }}"
-        echo "Deploying as user: ${{ secrets.DEPLOY_USER }}"
-        echo "Deploying to destination: ${{ secrets.DEPLOY_DESTINATION }}"
-        echo "Using key file: ~/.ssh/deploy_key"
-        echo "Deploying assets from: ./dist"
-        
-        # Test SSH connection manually first
-        echo "Testing SSH connection..."
-        ssh -i ~/.ssh/deploy_key -o ConnectTimeout=10 -o BatchMode=yes ${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_TARGET }} "echo 'SSH connection test successful'" || echo "SSH connection test failed"
-        
         ./scripts/deploy.sh \
           --target ${{ secrets.DEPLOY_TARGET }} \
           --destination ${{ secrets.DEPLOY_DESTINATION }} \
