@@ -1,0 +1,12 @@
+---
+import Root from './root.astro';
+import type { CollectionEntry } from 'astro:content';
+
+type Props = CollectionEntry<'blog'>['data'];
+
+const { title } = Astro.props;
+---
+
+<Root title={title}>
+	<slot />
+</Root>

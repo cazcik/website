@@ -1,0 +1,29 @@
+---
+import Root from '../../layouts/root.astro';
+import { getCollection } from 'astro:content';
+
+const posts = (await getCollection('blog')).sort(
+	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+);
+---
+
+<Root title="blog - @cazcik">
+	<div class="pt-10 pb-18">
+		<div>
+			<h1 class="text-xl font-medium text-black">blog</h1>
+		</div>
+		<div class="pt-2">
+			<p class="text-sm text-neutral-800">i write about security, code, startups, and technology when it feels right.</p>
+		</div>
+		<div class="pt-8">
+			<h2 class="text-lg font-medium text-black">recent posts</h2>
+			<ul class="list-disc list-inside text-sm pl-0 pt-2 text-neutral-800 space-y-2">
+				{posts && posts.length > 0 ? posts.map((post) => (
+					<li class="pl-2">
+						<a href={`/blog/${post.id}`}>{post.data.title}</a>
+					</li>
+				)) : <p class="text-neutral-800">no posts yet</p>}
+			</ul>
+		</div>
+	</div>
+</Root>

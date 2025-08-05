@@ -1,0 +1,64 @@
+---
+import "../styles/global.css";
+
+interface Props {
+	title: string;
+}
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en" class="bg-neutral-50 text-black antialiased scroll-smooth">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="canonical" href={canonicalURL} />
+        <title>{title}</title>
+        <meta name="title" content={title} />
+        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" href="/icons/ice.png" />
+        <link rel="icon" type="image/svg+xml" href="/icons/ice.svg" />
+        <meta name="description" content="My humble home on the collection of tubes we call the internet" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={Astro.url} />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content="My humble home on the collection of tubes we call the internet" />
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content={Astro.url} />
+        <meta property="twitter:title" content={title} />
+        <meta property="twitter:description" content="My humble home on the collection of tubes we call the internet" />
+    </head>
+	<body>
+        <div class="flex min-h-dvh flex-col max-w-2xl w-full mx-auto px-6 pt-6 pb-3 sm:border-x sm:border-neutral-100 bg-white">
+            <a href="#content" class="sr-only">skip to content</a>
+            <header class="relative">
+                <div class="flex items-center justify-between pb-3">
+                    <div>
+                        <a href="/" class="font-medium text-black">@cazcik</a>
+                    </div>
+                    <nav class="flex items-center gap-x-5">
+                        <a href="/blog" class="text-neutral-500 hover:text-neutral-800">blog</a>
+                        <a target="_blank" rel="noopener noreferrer" href="https://github.com/cazcik" class="text-neutral-500 hover:text-neutral-800 flex items-center gap-x-1">
+                            <span>code</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-up-right-icon lucide-arrow-up-right size-4"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+                        </a>
+                        <a target="_blank" rel="noopener noreferrer" href="https://x.com/cazcik" class="text-neutral-500 hover:text-neutral-800 flex items-center gap-x-1">
+                            <span>follow</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-up-right-icon lucide-arrow-up-right size-4"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+                        </a>
+                    </nav>
+                </div>
+            </header>
+            <main id="content" class="grow">
+                <slot />
+            </main>
+            <footer class="relative pt-3">
+                <p class="text-center text-xs text-neutral-500">&copy; 2025 CAZCIK</p>
+            </footer>
+        </div>
+	</body>
+</html>
+
