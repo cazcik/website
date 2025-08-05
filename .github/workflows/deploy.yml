@@ -31,14 +31,17 @@ jobs:
         mkdir -p ~/.ssh
         echo "${{ secrets.DEPLOY_KEY }}" > ~/.ssh/deploy_key
         chmod 600 ~/.ssh/deploy_key
-        ssh-keyscan -H ${{ secrets.DEPLOY_TARGET }} >> ~/.ssh/known_hosts
-    
+     
     - name: login to tailscale
       uses: tailscale/github-action@v3
       with:
         oauth-client-id: ${{ secrets.TS_OAUTH_CLIENT_ID }}
         oauth-secret: ${{ secrets.TS_OAUTH_SECRET }}
         tags: tag:ci
+        
+    - name: add host to known hosts
+      run: |
+        ssh-keyscan -H ${{ secrets.DEPLOY_TARGET }} >> ~/.ssh/known_hosts
         
     - name: deploy to server
       run: |
