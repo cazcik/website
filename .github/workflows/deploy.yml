@@ -1,0 +1,50 @@
+name: build and deploy
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: checkout code
+      uses: actions/checkout@v4
+      
+    - name: setup bun
+      uses: oven-sh/setup-bun@v1
+      with:
+        bun-version: latest
+        
+    - name: make scripts executable
+      run: |
+        chmod +x scripts/build.sh
+        chmod +x scripts/deploy.sh
+        
+    - name: build site
+      run: ./scripts/build.sh
+      
+    - name: setup ssh key
+      run: |
+        mkdir -p ~/.ssh
+        echo "${{ secrets.DEPLOY_KEY }}" > ~/.ssh/deploy_key
+        chmod 600 ~/.ssh/deploy_key
+        ssh-keyscan -H ${{ secrets.DEPLOY_TARGET }} >> ~/.ssh/known_hosts
+    
+    - name: login to tailscale
+      uses: tailscale/github-action@v3
+      with:
+        oauth-client-id: ${{ secrets.TS_OAUTH_CLIENT_ID }}
+        oauth-secret: ${{ secrets.TS_OAUTH_SECRET }}
+        tags: tag:ci
+        
+    - name: deploy to server
+      run: |
+        ./scripts/deploy.sh \
+          --target ${{ secrets.DEPLOY_TARGET }} \
+          --destination ${{ secrets.DEPLOY_DESTINATION }} \
+          --user ${{ secrets.DEPLOY_USER }} \
+          --key ~/.ssh/deploy_key \
+          --assets ./dist
